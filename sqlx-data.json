@@ -1,0 +1,341 @@
+{
+  "db": "MySQL",
+  "07274bfa1d87fe34500bfc1bf1077a1626b6c94c6a93988c751d8f4df57f2507": {
+    "query": "SELECT hello_id, created_at, updated_at, deleted_at, message FROM hello_status WHERE hello_id = ?",
+    "describe": {
+      "columns": [
+        {
+          "ordinal": 0,
+          "name": "hello_id",
+          "type_info": {
+            "type": "LongLong",
+            "flags": {
+              "bits": 4129
+            },
+            "char_set": 63,
+            "max_size": 20
+          }
+        },
+        {
+          "ordinal": 1,
+          "name": "created_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 2,
+          "name": "updated_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 3,
+          "name": "deleted_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 128
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 4,
+          "name": "message",
+          "type_info": {
+            "type": "VarString",
+            "flags": {
+              "bits": 4097
+            },
+            "char_set": 224,
+            "max_size": 1024
+          }
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "3d8b829089abf8c21b54fb4d891cff05c1185314af1283852303f8dce7782435": {
+    "query": "SELECT id, created_at, updated_at, deleted_at, name FROM hello WHERE deleted_at IS NULL",
+    "describe": {
+      "columns": [
+        {
+          "ordinal": 0,
+          "name": "id",
+          "type_info": {
+            "type": "LongLong",
+            "flags": {
+              "bits": 547
+            },
+            "char_set": 63,
+            "max_size": 20
+          }
+        },
+        {
+          "ordinal": 1,
+          "name": "created_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 2,
+          "name": "updated_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 3,
+          "name": "deleted_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 128
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 4,
+          "name": "name",
+          "type_info": {
+            "type": "VarString",
+            "flags": {
+              "bits": 4097
+            },
+            "char_set": 224,
+            "max_size": 1024
+          }
+        }
+      ],
+      "parameters": {
+        "Right": 0
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "5ef889faebe74585cba4b997ecd13553f3b4a7741db6450eb0b545c8f2d2a846": {
+    "query": "INSERT INTO hello_status (hello_id, created_at, updated_at, deleted_at, message) VALUES (?, ?, ?, ?, ?)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 5
+      },
+      "nullable": []
+    }
+  },
+  "6b83ae73f1b61400d7387c18f9ba22907acad68c810e003d60e644c52183b8ce": {
+    "query": "DELETE FROM hello WHERE id = ?",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": []
+    }
+  },
+  "7bd14f3c9aeca92668009f7ffb6476627d7777f7f96a291c69e6bcc3cd31b1a9": {
+    "query": "SELECT id, created_at, updated_at, deleted_at, name FROM hello WHERE deleted_at IS NOT NULL and deleted_at < ?",
+    "describe": {
+      "columns": [
+        {
+          "ordinal": 0,
+          "name": "id",
+          "type_info": {
+            "type": "LongLong",
+            "flags": {
+              "bits": 547
+            },
+            "char_set": 63,
+            "max_size": 20
+          }
+        },
+        {
+          "ordinal": 1,
+          "name": "created_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 2,
+          "name": "updated_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 3,
+          "name": "deleted_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 128
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 4,
+          "name": "name",
+          "type_info": {
+            "type": "VarString",
+            "flags": {
+              "bits": 4097
+            },
+            "char_set": 224,
+            "max_size": 1024
+          }
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "b49d81e009adc93e2596c7defdee09d6c099d8b0a9581323ff5a6f32b8f61c61": {
+    "query": "SELECT id, created_at, updated_at, deleted_at, name FROM hello WHERE id = ?",
+    "describe": {
+      "columns": [
+        {
+          "ordinal": 0,
+          "name": "id",
+          "type_info": {
+            "type": "LongLong",
+            "flags": {
+              "bits": 547
+            },
+            "char_set": 63,
+            "max_size": 20
+          }
+        },
+        {
+          "ordinal": 1,
+          "name": "created_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 2,
+          "name": "updated_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 4225
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 3,
+          "name": "deleted_at",
+          "type_info": {
+            "type": "Datetime",
+            "flags": {
+              "bits": 128
+            },
+            "char_set": 63,
+            "max_size": 26
+          }
+        },
+        {
+          "ordinal": 4,
+          "name": "name",
+          "type_info": {
+            "type": "VarString",
+            "flags": {
+              "bits": 4097
+            },
+            "char_set": 224,
+            "max_size": 1024
+          }
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "d8424312a1200926a696caf147714aabb11b2271b246d844773856d111a3b261": {
+    "query": "DELETE FROM hello_status WHERE hello_id = ?",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": []
+    }
+  }
+}

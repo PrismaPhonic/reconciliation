@@ -1,0 +1,21 @@
+[package]
+name = "reconciliation"
+version = "0.1.0"
+authors = ["Peter Farr <Peter@PrismaPhonic.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.51"
+futures = "0.3.17"
+tokio = { version = "1.12.0", features = ["full", "signal"] }
+tokio-context = "0.1.2"
+tracing = "0.1.28"
+
+[dev-dependencies]
+lazy_static = "1.4.0"
+thiserror = "1.0.29"
+structopt = "0.3.23"
+chrono = "0.4.19"
+sqlx = { version = "0.5", features = ["runtime-tokio-native-tls", "mysql", "chrono", "macros", "tls", "offline"] }
